@@ -11,8 +11,8 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true, length: { minimum: 2 }
   validates :last_name, presence: true, length: { minimum: 2 }
-  validates :email, presence: true, uniqueness: true
-  validates :age, presence: true, numericality: true, on: :account_setup
+  validates :email, presence: true, uniqueness: true, format: { with: /\S+[@]\S+[.]\S{2,10}/ }
+  validates :age, presence: true, inclusion: { in: 1.. }
   validates :address, presence: true
   validates :user_type, presence: true
   validates :about_me, presence: true, length: { maximum: 500 }
