@@ -1,0 +1,9 @@
+<h1>Eventos</h1>
+
+<div class= "container">
+  <% @events.each do |event| %>
+
+  <h2><strong><%=link_to event.name, event_path(event) %></strong></h2>
+            <p>Ponente: <%=  event.user.first_name %> <%= event.user.last_name %></p>
+  <% end %>
+</div>
