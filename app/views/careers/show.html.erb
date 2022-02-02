@@ -8,6 +8,35 @@
   </div>
 </div>
 
+<h2>Reviews:</h2>
+<ul class="list-group">
+  <% @career.reviews.each do |review| %>
+    <li class="list-group-item">Rating: <%= review.rating %></li>
+    <li class="list-group-item"><%= review.content %></li>
+    <%= link_to "Remove",
+                 career_delete_review_path(career_id: @career.id, id: review.id),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" }
+ %>
+  <% end %>
+</ul>
+
+
+<div class= "container">
+  <div id="card_signup_create">
+    <h1 class="mb-3">Añadir un nuevo review</h1>
+
+      <%= simple_form_for [ @career, @review ] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating %>
+      <%= f.submit "Submit review", class: "btn btn-primary" %>
+      <% end %>
+
+
+  </div>
+</div>
+
+
 <%= link_to 'Editar', edit_career_path(@career) , class: "btn btn-ghost mt-3 ml-3"  %>
     <%= link_to 'Eliminar', career_path(@career), class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
     <%= link_to 'Regresar', careers_path, class: "btn btn-ghost mt-3 ml-3"  %>
