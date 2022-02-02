@@ -1,0 +1,7 @@
+<%= simple_form_for event do |f| %>
+  <%= f.input :name, label: "Título" %>
+  <%= f.input :date, label: "Fecha"%>
+  <%= f.input :modality, label: "Modalidad" %>
+  <%= f.input :description, label: "Descripción" %>
+  <%= f.submit "Guardar", class: "btn btn-dark mb-3 mt-3" %>
+<% end %>

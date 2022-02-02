@@ -15,6 +15,9 @@ Career.create(name: "Administración", area: "Ingeniería", duration: 5, profile
 Career.create(name: "Derecho", area: "Ingeniería", duration: 6, profile: "abc", description: "abc")
 Career.create(name: "Arquitectura", area: "Ingeniería", duration: 5, profile: "abc", description: "abc")
 
+puts "Creando eventos"
+Event.create(name: "abc", date: "2022 February 15", modality: "virtual", description: "abc")
+
 puts "Creando Instituciones"
 Institution.create(name: "Universidad Nacional de ingenieria", address: "Lima", phone: 999666999, email: "sec_general@uni.edu.pe", url: "https://www.uni.edu.pe/", description: "Es una institución educativa fundada en 1876 por el ingeniero polaco Eduardo de Habich, con la denominación de Escuela Especial de Construcciones Civiles y de Minas del Perú, conocida tradicionalmente como Escuela de Ingeniero y convertida en universidad en 1955 en la UNIVERSIDAD NACIONAL DE INGENIERIA (UNI). Hoy es el primer y principal centro de formación de ingenieros, arquitectos y científicos de nuestro país.")
 Institution.create(name: "Universidad Nacional Mayor de San Marcos", address: "Lima", phone: 6197000, email: "vrap@unmsm.edu.pe", url: "https://www.uni.edu.pe/", description: "Es una universidad pública considerada la institución educativa más importante, reconocida y representativa a nivel nacional, es reconocida como la universidad más antigua de América, por lo que figura en documentos y publicaciones oficiales como «Universidad del Perú, Decana de América»")
