@@ -3,8 +3,8 @@ class Institution < ApplicationRecord
 
   validates :name, presence: true, length: { minimum: 2 }
   validates :address, presence: true
-  validates :phone, presence: true, length: { is: 9 }
+  validates :phone, presence: true, length: { minimum: 5 }
   validates :email, presence: true
   validates :url, presence: true
-  validates :type, presence: true, inclusion: { in: %w[público privado] }
+  validates :description, presence: true, length: { minimum: 10 }
 end

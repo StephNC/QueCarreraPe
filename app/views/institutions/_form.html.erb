@@ -1,0 +1,9 @@
+<%= simple_form_for institution do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone %>
+  <%= f.input :email %>
+  <%= f.input :url %>
+  <%= f.input :description %>
+  <%= f.submit "Guardar", class: "btn btn-dark mb-3 mt-3" %>
+<% end %>
