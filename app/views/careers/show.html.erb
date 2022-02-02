@@ -1,0 +1,13 @@
+<div class="card-product">
+  <div class="card-product-infos mt-3 mb-3">
+    <h1><strong><%= @career.name %></strong></h1>
+    <p><strong>Área: </strong><%= @career.area %></p>
+    <p><strong>Duración: </strong><%= @career.duration %></p>
+    <p><strong>Perfil del estudiante: </strong><%= @career.profile %></p>
+    <p><strong>Descripción de la carrera: </strong><%= @career.description %></p>
+  </div>
+</div>
+
+<%= link_to 'Editar', edit_career_path(@career) , class: "btn btn-ghost mt-3 ml-3"  %>
+    <%= link_to 'Eliminar', career_path(@career), class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
+    <%= link_to 'Regresar', careers_path, class: "btn btn-ghost mt-3 ml-3"  %>

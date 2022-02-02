@@ -6,5 +6,5 @@ class Institution < ApplicationRecord
   validates :phone, presence: true, length: { is: 9 }
   validates :email, presence: true
   validates :url, presence: true
-  validates :type, presence: true, inclusion: { in: %w(público privado) }
+  validates :type, presence: true, inclusion: { in: %w[público privado] }
 end
