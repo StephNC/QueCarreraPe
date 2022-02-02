@@ -6,7 +6,7 @@ class CreateInstitutions < ActiveRecord::Migration[6.1]
       t.integer :phone
       t.string :email
       t.text :url
-      t.string :type
+      t.string :description
 
       t.timestamps
     end
