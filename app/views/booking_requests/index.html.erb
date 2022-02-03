@@ -1,0 +1,11 @@
+<h1>Mis eventos reservados</h1>
+
+  <div class= "container">
+    <% @bookings.each do |booking| %>
+        <div>
+          <h2><strong><%=link_to booking.event.name, booking %></strong></h2>
+                <p>Fecha: <%=  booking.event.date %></p>
+                <p>Modalidad: <%= booking.event.modality %></p>
+        </div>
+    <% end %>
+</div>
