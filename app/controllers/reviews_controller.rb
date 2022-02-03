@@ -4,11 +4,10 @@ class ReviewsController < ApplicationController
     @career = Career.find(params[:career_id])
     @review.career = @career
     @review.user = current_user
-    if @review.save
-      redirect_to career_path(@career)
-    else
-      render :new
-    end
+    flash[:notice] = @review.errors.full_messages.to_sentence unless @review.save
+
+    redirect_to career_path(@career)
+
   end
 
   def destroy

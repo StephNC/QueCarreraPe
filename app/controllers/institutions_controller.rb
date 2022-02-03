@@ -16,7 +16,7 @@ class InstitutionsController < ApplicationController
   end
 
   def create
-    @institution = Institution.find(institution_params)
+    @institution = Institution.new(institution_params)
     if @institution.save
       redirect_to institution_path(@institution)
     else

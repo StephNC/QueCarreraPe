@@ -1,0 +1,13 @@
+<div class= "container">
+  <div id="card_signup_create">
+    <h1 class="mb-3">Añadir una carrera a una institución</h1>
+
+  <%= simple_form_for [@career, @career_institution] do |f| %>
+  <%= f.input :institution_id, collection: Institution.all %>
+  <%= f.submit "Guardar", class: "btn btn-dark mb-3 mt-3" %>
+<% end %>
+
+
+  <%= link_to 'Regresar a la lista de carreras', careers_path %>
+  </div>
+</div>
