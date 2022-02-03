@@ -3,5 +3,6 @@
   <%= f.input :date, label: "Fecha"%>
   <%= f.input :modality, label: "Modalidad" %>
   <%= f.input :description, label: "Descripción" %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit "Guardar", class: "btn btn-dark mb-3 mt-3" %>
 <% end %>

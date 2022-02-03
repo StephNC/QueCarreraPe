@@ -1,7 +1,8 @@
 <h1>Carreras</h1>
 <ul>
   <% @careers.each do |career| %>
-  <li><%= link_to career.name, career_path(career) %></li>
+    <li><%= cl_image_tag career.photo.key, height: 200, width: 200, crop: :fill %>
+        <%= link_to career.name, career_path(career) %></li>
   <% end %>
 </ul>
 

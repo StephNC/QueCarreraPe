@@ -1,5 +1,6 @@
 <div class="card-product">
   <div class="card-product-infos mt-3 mb-3">
+    <%= cl_image_tag @event.photo.key, height: 200, width: 200, crop: :fill %>
     <h1><strong><%= @event.name %></strong></h1>
     <p><strong>Fecha: </strong><%= @event.date %></p>
     <p><strong>Modalidad: </strong><%= @event.modality %></p>
