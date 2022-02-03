@@ -4,3 +4,5 @@
     <li><%= link_to institution.name, institution_path(institution.id)%></li>
   <% end %>
 </ul>
+
+<%= link_to 'Agregar una nueva institución', new_institution_path , class: "btn btn-ghost mt-3 ml-3"  %>

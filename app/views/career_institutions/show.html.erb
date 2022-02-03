@@ -1,0 +1,10 @@
+<div class="card-product">
+  <div class="card-product-infos mt-3 mb-3">
+    <h1><strong><%= @career_institution.career.name %></strong></h1>
+    <h1><strong><%= @career_institution.institution.name %></strong></h1>
+  </div>
+</div>
+
+<%= link_to 'Editar', edit_career_institution_path(@career_institution) , class: "btn btn-ghost mt-3 ml-3"  %>
+<%= link_to 'Eliminar', career_institution_path(@career_institution), class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
+<%= link_to 'Regresar', careers_path, class: "btn btn-ghost mt-3 ml-3"  %>
