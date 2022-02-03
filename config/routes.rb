@@ -6,13 +6,14 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create]
     delete "/reviews/:id", to: "reviews#destroy", as: :delete_review
   end
-    
+
   resources :events do
     member do
       post "register"
     end
   end
-  
+
   resources :institutions
 
+  resources :booking_requests, only: [:index, :show, :destroy]
 end

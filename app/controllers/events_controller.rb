@@ -43,7 +43,7 @@ class EventsController < ApplicationController
     # redirect_to event_request_path(@event)
     @booking_request = BookingRequest.new(user_id: current_user.id, event_id: params[:id])
     @booking_request.save
-    redirect_to events_path
+    redirect_to booking_requests_path
   end
 
   private
