@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :careers do
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:create]
     delete "/reviews/:id", to: "reviews#destroy", as: :delete_review
 
     resources :career_institutions, only: [:new, :create]
@@ -18,4 +18,5 @@ Rails.application.routes.draw do
 
   resources :institutions
 
+  resources :booking_requests, only: [:index, :show, :destroy]
 end

@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+#container form {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+body {
+  background-color: white;
+}
