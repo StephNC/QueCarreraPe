@@ -1,8 +1,14 @@
 <h1>Carreras</h1>
-<ul>
-  <% @careers.each do |career| %>
-  <li><%= link_to career.name, career_path(career) %></li>
-  <% end %>
-</ul>
+
+<div class="cards">
+    <% Career.all.each do |career| %>
+        <div class="card-trip">
+          <div class="card-trip-infos">
+            <h2><%= link_to career.name, career_path(career) %></li></h2>
+            <h2><%= career.area %></li></h2>
+          </div>
+        </div>
+    <% end %>
+</div>
 
 <%= link_to 'Agregar una nueva carrera', new_career_path , class: "btn btn-ghost mt-3 ml-3"  %>
