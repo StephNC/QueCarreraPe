@@ -196,7 +196,14 @@
   font-size: 35px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #0b113b;
+}
+
+.card-event a {
+  text-decoration: none;
+  color: #060a29;
+  :hover {
+    color: #2d356a;
+  }
 }
 
 .card-event p {
@@ -205,7 +212,6 @@
   margin: 0;
   color: #7759FF;
 }
-
 
 .card-event .card-event-infos {
   padding: 30px;
@@ -220,4 +226,8 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.card-event:hover {
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
