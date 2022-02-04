@@ -5,7 +5,11 @@ class CareersController < ApplicationController
   before_action :set_career, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @careers = Career.all
+    if params[:query].present?
+      @careers = Career.search_by_name_and_area(params[:query])
+    else
+      @careers = Career.all
+    end
   end
 
   def show
