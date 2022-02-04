@@ -1,15 +1,18 @@
-<div class="card-product">
-  <div class="card-product-infos mt-3 mb-3">
-
-    <h1><strong><%= @institution.name %></strong></h1>
-    <p><strong>Dirección: </strong><%= @institution.address %></p>
-    <p><strong>Telefono: </strong><%= @institution.phone %></p>
-    <p><strong>Correo Institucional: </strong><%= @institution.email %></p>
-    <p><strong>Descripción de la Institución: </strong><%= @institution.description %></p>
-    <p><strong>Página principal: </strong><%= @institution.url %></p>
+<div class="container">
+  <div class="card-product">
+    <%= cl_image_tag @institution.photo.key, height: 200, width: 200, crop: :fill %>
+    <div class="card-product-infos mt-3 mb-3">
+      <h1><strong><%= @institution.name %></strong></h1>
+      <p><strong>Dirección: </strong><%= @institution.address %></p>
+      <p><strong>Telefono: </strong><%= @institution.phone %></p>
+      <p><strong>Correo Institucional: </strong><%= @institution.email %></p>
+      <p><strong>Descripción de la Institución: </strong><%= @institution.description %></p>
+      <p><strong>Página principal: </strong><%= @institution.url %></p>
+    </div>
   </div>
-</div>
 
-<%= link_to 'Editar', edit_institution_path(@institution) , class: "btn btn-ghost mt-3 ml-3"  %>
-    <%= link_to 'Eliminar', institution_path(@institution), class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
-    <%= link_to 'Regresar', institutions_path, class: "btn btn-ghost mt-3 ml-3"  %>
+  <%= link_to 'Editar', edit_institution_path(@institution) , class: "btn btn-ghost mt-3 ml-3"  %>
+      <%= link_to 'Eliminar', institution_path(@institution), class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
+      <%= link_to 'Regresar', institutions_path, class: "btn btn-ghost mt-3 ml-3"  %>
+
+</div>

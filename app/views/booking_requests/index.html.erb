@@ -1,10 +1,10 @@
-<h1>Mis eventos reservados</h1>
+<div class= "container">
+  <h1>Mis eventos reservados</h1>
 
-  <div class= "container">
     <% @bookings.each do |booking| %>
         <div>
           <h2><strong><%=link_to booking.event.name, booking %></strong></h2>
-                  <%= cl_image_tag booking.photo.key, height: 200, width: 200, crop: :fill %>
+                  <%= cl_image_tag booking.event.photo.key, height: 200, width: 200, crop: :fill %>
                   <p>Fecha: <%=  booking.event.date %></p>
                   <p>Modalidad: <%= booking.event.modality %></p>
         </div>
