@@ -19,6 +19,7 @@
     <% Career.all.each do |career| %>
         <div class="card-trip">
           <div class="card-trip-infos">
+            <%= cl_image_tag career.photo.key, height: 100, width: 100, crop: :fill %>
             <h2><%= link_to career.name, career_path(career) %></li></h2>
             <h2><%= career.area %></li></h2>
           </div>
