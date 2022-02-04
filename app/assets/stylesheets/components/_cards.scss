@@ -178,3 +178,18 @@
     color:#142850;
   }
 }
+.card-sigup {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 13px;
+  margin: 129px;
+  box-shadow: 0px 0px 31px rgba(119,89,255,0.5);
+  padding: 50px;
+}
+.card-sigup h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  color:rgb(119,89,255)
+}
