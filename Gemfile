@@ -34,6 +34,8 @@ gem 'cloudinary', '~> 1.16.0'
 
 gem 'pg_search', '~> 2.3.0'
 
+gem 'turbolinks_render'
+
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'

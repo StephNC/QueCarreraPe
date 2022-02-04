@@ -1,44 +1,42 @@
-<div class="card-product">
-  <div class="card-product-infos mt-3 mb-3">
-    <%= cl_image_tag @career.photo.key, height: 200, width: 200, crop: :fill %>
-    <h1><strong><%= @career.name %></strong></h1>
-    <p><strong>Área: </strong><%= @career.area %></p>
-    <p><strong>Duración: </strong><%= @career.duration %></p>
-    <p><strong>Perfil del estudiante: </strong><%= @career.profile %></p>
-    <p><strong>Descripción de la carrera: </strong><%= @career.description %></p>
-  </div>
-</div>
-
-<h2>Reviews:</h2>
-<ul class="list-group">
-  <% @career.reviews.each do |review| %>
-    <li class="list-group-item">Rating: <%= review.rating %></li>
-    <li class="list-group-item"><%= review.content %></li>
-    <%= link_to "Remove",
-                 career_delete_review_path(career_id: @career.id, id: review.id),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" }
- %>
-  <% end %>
-</ul>
-
-
 <div class= "container">
-  <div id="card_signup_create">
-    <h1 class="mb-3">Añadir un nuevo review</h1>
+  <div class="card-product">
+    <div class="card-product-infos mt-3 mb-3">
+    <%= cl_image_tag @career.photo.key, height: 200, width: 200, crop: :fill %>
+      <h1><strong><%= @career.name %></strong></h1>
+      <p><strong>Área: </strong><%= @career.area %></p>
+      <p><strong>Duración: </strong><%= @career.duration %></p>
+      <p><strong>Perfil del estudiante: </strong><%= @career.profile %></p>
+      <p><strong>Descripción de la carrera: </strong><%= @career.description %></p>
+    </div>
 
-      <%= simple_form_for [ @career, @review ] do |f| %>
-      <%= f.input :content %>
-      <%= f.input :rating %>
-      <%= f.submit "Submit review", class: "btn btn-primary" %>
+
+  <h2><%= pluralize @career.reviews.size, "review" %></h2>
+  <div id="reviews">
+    <% if @career.reviews.blank? %>
+      Se el primero/a en dejar tu comentario para la carrera de <%= @career.name %>
+    <% else %>
+      <% @career.reviews.each do |review| %>
+        <p class="list-group-item" id="review-<%= review.id %>">Rating: <%= "⭐" * review.rating %></li>
+        <p class="list-group-item" id="review-<%= review.id %>"><%= review.content %></li>
+        <p><%= link_to "Eliminar Review", career_delete_review_path(career_id: @career.id, id: review.id), method: :delete, remote: true, class: "text-danger"%></p>
       <% end %>
+    <% end %>
+  </div>
+
+  <div id="card_signup_create">
+    <h2 class="mb-3">Añadir un nuevo review</h2>
+
+    <%= simple_form_for([ @career, @review ], remote: true) do |f| %>
+      <%= f.input :rating, collection: 1..5 %>
+      <%= f.input :content, as: :text %>
+      <%= f.submit "Añadir review", class: "btn btn-primary" %>
+    <% end %>
 
 
   </div>
+
+  <%= link_to 'Editar', edit_career_path(@career) , class: "btn btn-ghost mt-3 ml-3"  %>
+  <%= link_to 'Eliminar', career_path(@career), class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
+  <%= link_to 'Regresar', careers_path, class: "btn btn-ghost mt-3 ml-3"  %>
+  <%= link_to 'Enlazar carrera-institución', new_career_career_institution_path(@career) , class: "btn btn-ghost mt-3 ml-3"  %>
 </div>
-
-
-<%= link_to 'Editar', edit_career_path(@career) , class: "btn btn-ghost mt-3 ml-3"  %>
-<%= link_to 'Eliminar', career_path(@career), class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
-<%= link_to 'Regresar', careers_path, class: "btn btn-ghost mt-3 ml-3"  %>
-<%= link_to 'Enlazar carrera-institución', new_career_career_institution_path(@career) , class: "btn btn-ghost mt-3 ml-3"  %>
