@@ -4,8 +4,9 @@
     <% @bookings.each do |booking| %>
         <div>
           <h2><strong><%=link_to booking.event.name, booking %></strong></h2>
-                <p>Fecha: <%=  booking.event.date %></p>
-                <p>Modalidad: <%= booking.event.modality %></p>
+                  <%= cl_image_tag booking.photo.key, height: 200, width: 200, crop: :fill %>
+                  <p>Fecha: <%=  booking.event.date %></p>
+                  <p>Modalidad: <%= booking.event.modality %></p>
         </div>
     <% end %>
 </div>

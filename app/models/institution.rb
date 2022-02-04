@@ -1,5 +1,6 @@
 class Institution < ApplicationRecord
   has_many :career_institutions
+  has_one_attached :photo
 
   validates :name, presence: true, length: { minimum: 2 }
   validates :address, presence: true

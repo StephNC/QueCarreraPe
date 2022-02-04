@@ -1,14 +1,14 @@
 <h1>Carreras</h1>
 
 <div class="cards">
-    <% Career.all.each do |career| %>
-        <div class="card-trip">
-          <div class="card-trip-infos">
-            <h2><%= link_to career.name, career_path(career) %></li></h2>
-            <h2><%= career.area %></li></h2>
-          </div>
-        </div>
+  <ul>
+    <% @careers.each do |career| %>
+      <li><%= cl_image_tag career.photo.key, height: 200, width: 200, crop: :fill %>
+          <h2><%= link_to career.name, career_path(career) %></h2>
+          <h2><%= career.area %></h2></li>
     <% end %>
+  </ul>
 </div>
+
 
 <%= link_to 'Agregar una nueva carrera', new_career_path , class: "btn btn-ghost mt-3 ml-3"  %>
