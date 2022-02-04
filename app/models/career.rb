@@ -1,6 +1,7 @@
 class Career < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :career_institutions
+  has_one_attached :photo
 
   validates :name, presence: true, length: { minimum: 2 }
   validates :area, presence: true
