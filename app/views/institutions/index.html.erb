@@ -1,7 +1,7 @@
 <h1>Instituciones</h1>
 <ul>
   <% @institutions.each do |institution| %>
-    <li><%= link_to institution.name, institution_path(institution.id)%>
+
         <%= cl_image_tag institution.photo.key, height: 200, width: 200, crop: :fill %></li>
   <% end %>
 </ul>
