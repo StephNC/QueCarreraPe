@@ -3,7 +3,7 @@
     <div class="cards">
     <% @events.each do |event| %>
       <div class="card-event">
-        <%= cl_image_tag event.photo.key, height: 200, width: 200, crop: :fill %>
+
             <div class="card-event-infos">
               <h2><strong><%=link_to event.name, event_path(event) %></strong></h2>
               <p><strong>Ponente: </strong><%=  event.user.first_name %> <%= event.user.last_name %></p>
