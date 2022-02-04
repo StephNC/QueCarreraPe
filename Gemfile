@@ -29,6 +29,12 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.16.0'
+
+gem 'pg_search', '~> 2.3.0'
+
+gem 'turbolinks_render'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
