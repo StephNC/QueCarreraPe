@@ -17,12 +17,9 @@
       Se el primero/a en dejar tu comentario para la carrera de <%= @career.name %>
     <% else %>
       <% @career.reviews.each do |review| %>
-        <li class="list-group-item">Rating: <%= review.rating %></li>
-        <li class="list-group-item"><%= review.content %></li>
-        <%= link_to "Remove",
-                    career_delete_review_path(career_id: @career.id, id: review.id),
-                      method: :delete,
-                      data: { confirm: "Are you sure?" }%>
+        <p class="list-group-item" id="review-<%= review.id %>">Rating: <%= "⭐" * review.rating %></li>
+        <p class="list-group-item" id="review-<%= review.id %>"><%= review.content %></li>
+        <p><%= link_to "Eliminar Review", career_delete_review_path(career_id: @career.id, id: review.id), method: :delete, remote: true, class: "text-danger"%></p>
       <% end %>
     <% end %>
   </div>
@@ -31,8 +28,8 @@
     <h2 class="mb-3">Añadir un nuevo review</h2>
 
     <%= simple_form_for([ @career, @review ], remote: true) do |f| %>
+      <%= f.input :rating, collection: 1..5 %>
       <%= f.input :content, as: :text %>
-      <%= f.input :rating %>
       <%= f.submit "Añadir review", class: "btn btn-primary" %>
     <% end %>
 

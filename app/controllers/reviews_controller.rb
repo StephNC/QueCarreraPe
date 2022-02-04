@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
     @review.career = @career
     @review.user = current_user
     if @review.save
-      redirect_to career_path(@career)
+      redirect_to career_path(@career, anchor: "review-#{@review.id}")
     else
       render "careers/show"
     end

@@ -1,5 +1,5 @@
 class Career < ApplicationRecord
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   has_many :career_institutions
 
   validates :name, presence: true, length: { minimum: 2 }
