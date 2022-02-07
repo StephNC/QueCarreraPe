@@ -1,5 +1,11 @@
 <div class="container" >
   <div id="container">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);">
+      <div class="container">
+        <h1>¿No sabes<strong> qué carrera</strong> seguir?</h1>
+        <p>¡Nosotros te ayudamos! </p>
+      </div>
+    </div>
     <%= form_tag careers_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
@@ -8,13 +14,6 @@
       %>
       <%= submit_tag "Buscar", class: "btn btn-search ml-3" %>
     <% end %>
-
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);">
-      <div class="container">
-        <h1>¿No sabes<strong> qué carrera</strong> seguir?</h1>
-        <p>¡Nosotros te ayudamos! </p>
-      </div>
-    </div>
     <div class="cards">
     <% Career.all.each do |career| %>
         <div class="card-trip">
