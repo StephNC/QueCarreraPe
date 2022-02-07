@@ -1,15 +1,20 @@
-<div class= "container">
-  <div><h1>Eventos</h1></div>
-    <div class="cards">
-    <% @events.each do |event| %>
-      <div class="card-event">
-        <%= cl_image_tag event.photo.key, height: 200, width: 200, crop: :fill %>
-        <div class="card-event-infos">
-          <h2><strong><%=link_to event.name, event_path(event) %></strong></h2>
-          <p><strong>Ponente: </strong><%=  event.user.first_name %> <%= event.user.last_name %></p>
-        </div>
-        <p class="card-event-infos"><%=  event.date %></p>
-      </div>
-    <% end %>
-    </div>
+<div class="header">
+  <h1>Eventos</h1>
+  <a href="https://quecarrerape.herokuapp.com/">HOME</a>
+  <span> / </span> EVENTOS
 </div>
+
+  <div class= "container">
+    <div class="cards-event">
+      <% @events.each do |event| %>
+        <div class="card-event">
+          <%= cl_image_tag event.photo.key, height: 200, width: 200, crop: :fill %>
+          <div class="card-event-infos">
+            <h2><strong><%=link_to event.name, event_path(event) %></strong></h2>
+            <h3><i class="fas fa-user-circle" ></i> <%=  event.user.first_name %> <%= event.user.last_name %></h3>
+            <h3><i class="fas fa-calendar-day" ></i> <%=  event.date %></h4>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>

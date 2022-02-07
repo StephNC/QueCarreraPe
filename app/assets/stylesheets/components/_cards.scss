@@ -104,6 +104,7 @@
   margin-bottom: 0;
   margin-top: 8px;
 }
+
 .card-product .card-product-infos {
   padding: 16px;
   margin-left: 20px;
@@ -211,46 +212,59 @@
   color:rgb(119,89,255)
 }
 
+.cards-event {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin: 20px 0px;
+  padding: 20px 0px;
+}
 .card-event {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  pointer-events: default;
+  width: 285px;
 }
 
 .card-event > img {
-  height: 150px;
+  height: 180px;
   width: 100%;
-  object-fit: cover;
+  position: relative;
 }
 
-.card-event h2 {
-  font-size: 35px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.card-event h3 {
+  font-size: 15px;
+  margin-bottom: -10px;
+  margin-block-start: 25px;
 }
 
 .card-event a {
   text-decoration: none;
-  color: #060a29;
-  :hover {
-    color: #2d356a;
-  }
+  color: #080c29;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.card-event a:hover {
+    color: #7759FF;
 }
 
 .card-event p {
-  font-size: 20px;
+  font-size: 24px 20px;
   opacity: .7;
   margin: 0;
   color: #7759FF;
 }
 
 .card-event .card-event-infos {
-  padding: 30px;
+  padding: 10px 25px;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
-  height: 95px;
+  height: 190px;
+  cursor: default;
 }
 
 .card-event-infos .card-event-user {
@@ -262,4 +276,28 @@
 
 .card-event:hover {
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.card-event-only {
+  overflow: hidden;
+  height: 345px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 85px;
+}
+
+.card-event-only .card-event-only-infos {
+  padding: 16px;
+  margin: 30px;
+  padding-right: 100px;
+  p{
+    font-size: 18px;
+  }
+  #description{
+    font-size: 18px;
+  }
 }
