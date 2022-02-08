@@ -1,7 +1,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 100px 0;
   background-image: linear-gradient(to right, #7759FF, #1FE0BA);
 }
 
@@ -9,8 +9,9 @@
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 50px;
+  font-size: 65px;
   font-weight: bold;
+  margin-left: 200px;
 }
 
 .banner p {
@@ -18,8 +19,55 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  padding-left: 200px;
+  padding-bottom: 30px;
 }
 
 .bottom-img {
   width: 100%;
+}
+
+.title::before {
+  content: '';
+  background: #7759FF;
+  height: 5px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transform: translateY(63px);
+}
+
+.title::after {
+  content: '';
+  background: #1FE0BA;
+  height: 10px;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  display: block;
+  transform: translateY(17px);
+}
+
+#testimonials {
+  margin: 100px 0;
+}
+
+.testimonials {
+  border-left: 4px solid #FFB83F;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.testimonials img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  margin: 0 10ñpx;
+}
+
+.user-details {
+  display: inline-block;
+  font-size: 12px;
 }
