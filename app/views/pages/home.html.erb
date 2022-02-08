@@ -1,37 +1,49 @@
-<div class="container" >
-  <div id="container">
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);">
-      <div class="container">
-        <h1>¿No sabes<strong> qué carrera</strong> seguir?</h1>
-        <p>¡Nosotros te ayudamos! </p>
-      </div>
-    </div>
-    <%= form_tag careers_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Busca una carrera o área de tu elección"
-      %>
-      <%= submit_tag "Buscar", class: "btn btn-search ml-3" %>
-    <% end %>
-  </div>
-
-  <%= link_to 'Test', test_path %>
-
-  <div class="cards">
-    <% Career.all.each do |career| %>
-        <div class="card-trip">
-          <%= cl_image_tag career.photo.key, height: 100, width: 100, crop: :fill %>
-          <div class="card-trip-infos">
-            <h2><li><%= link_to career.name, career_path(career) %></li></h2>
-            <h2><li><%= career.area %></li></h2>
-          </div>
+<div id="container">
+  <div class="banner">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>¿No sabes<strong> qué carrera</strong> estudiar?</h1>
+          <p class="promo-title">En <strong>QuéCarreraPe</strong> tenemos la respuesta, súmate y empieza a crear tu futuro hoy mismo.</p>
+          <p class="promo-title">Nuestro test online te ayuda a explorar tus habilidades y descubrir tu vocación ¡hazlo ya! </p>
+          <%= link_to 'Tomar Test Gratuito', test_path, class: "btn btn-dark mt-3 btn-test"%></a>
         </div>
-    <% end %>
+        <div class="col-md-6 text-center">
+          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/student-holding-book-3297137-2754838.png" alt="" class="img-fluid fig-3D">
+        </div>
+      </div>
+      <%= image_tag "wave1.png" %>
   </div>
+</div>
 
-<h2>Carreras del futuro</h2>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<div class="d-flex flex-wrap justify-content-center icon-box">
+  <div class="iconBox pt-3 text-center mx-3" style="width:280px;">
+    <i class="far fa-heart fa-5x icon"></i>
+    <h3 class="d-flex justify-content-center align-items-center font-w-700 dark-color align-center" style="min-height:60px;">Sabemos por lo que estás pasando</h3>
+    <p>abc</p>
+  </div>
+  <div class="iconBox pt-3 text-center mx-3" style="width:280px;">
+    <i class="fas fa-laptop fa-5x icon"></i>
+    <h3 class="d-flex justify-content-center align-items-center font-w-700 dark-color align-center" style="min-height:60px;">Donde sea que te encuentres</h3>
+    <p>abc</p>
+  </div>
+  <div class="iconBox pt-3 text-center mx-3" style="width:280px;">
+    <i class="far fa-handshake fa-5x icon"></i>
+    <h3 class="d-flex justify-content-center align-items-center font-w-700 dark-color align-center" style="min-height:60px;">Nuestra comunidad está para ti</h3>
+    <p>abc</p>
+  </div>
+</div>
+
+<div class="container">
+  <%= form_tag careers_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Busca una carrera o área de tu elección"
+    %>
+    <%= submit_tag "Buscar", class: "btn btn-search ml-3" %>
+  <% end %>
+
+  <h2 class="title text-center" style="padding-top: 70px">Carreras del futuro</h2>
 
   <div class="container my-4 w-100">
 
@@ -97,5 +109,105 @@
               <span class="sr-only">Siguiente</span>
           </a>
       </div>
+  </div>
+
+  <div class="container">
+    <h2 class="title text-center" style="padding-top: 70px">Testimonios</h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-wrap="false">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="single-box">
+                      <div class="img-area"><img src="https://images.unsplash.com/photo-1537476284443-e0d6f8b160d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt=""></div>
+                      <div class="img-text">
+                        <h2><strong>Fernanda Morales</strong></h2>
+                        <p>Lima, Perú</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>🤍🤍🤍🤍🤍</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="single-box">
+                      <div class="img-area"><img src="https://images.unsplash.com/photo-1542595715-c44d9b54e733?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80" alt=""></div>
+                      <div class="img-text">
+                        <h2><strong>Antonio Quispe</strong></h2>
+                        <p>Huancayo, Perú</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>🤍🤍🤍🤍🤍</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="single-box">
+                      <div class="img-area"><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80" alt=""></div>
+                      <div class="img-text">
+                        <h2><strong>Roxana Sánchez</strong></h2>
+                        <p>Trujillo, Perú</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>🤍🤍🤍🤍</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="single-box">
+                      <div class="img-area"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt=""></div>
+                      <div class="img-text">
+                        <h2><strong>Luis Huamán</strong></h2>
+                        <p>Huaraz, Perú</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>🤍🤍🤍🤍🤍</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="single-box">
+                      <div class="img-area"><img src="https://images.unsplash.com/photo-1509160195181-6bf095f02d88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt=""></div>
+                      <div class="img-text">
+                        <h2><strong>Maricarmen Patiño</strong></h2>
+                        <p>Arequipa, Perú</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>🤍🤍🤍</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="single-box">
+                      <div class="img-area"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt=""></div>
+                      <div class="img-text">
+                        <h2><strong>Sebastián Rodríguez</strong></h2>
+                        <p>Loreto, Perú</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>🤍🤍🤍🤍</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="padding: 90px; text-align: center;">
+      <h2 class="title text-center">Test vocacional</h2>
+      <h4>¿Listo/a para encontrar tu carrera?</h4>
+      <p><strong>Empieza a crear tu futuro hoy mismo</strong></p>
+      <%= link_to 'Tomar Test Gratuito', test_path, class: "btn btn-dark mt-3 btn-test-inf" %></a>
+    </div>
   </div>
 </div>
