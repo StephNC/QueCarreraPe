@@ -1,0 +1,39 @@
+
+.card-checkbox{
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+.question{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: #ffff;
+    background-color: blueviolet;
+    h3 {
+      margin: 0px;
+      padding-left: 10px;
+      font-size: 23px;
+    }
+}
+
+
+.circle-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #ffff;
+    padding: 1em;
+}
+
+.answer{
+    padding: 1em .5em;
+}
