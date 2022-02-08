@@ -72,7 +72,9 @@
                       </div>
                       </div>
               </div>
-          </div>
+            </div>
+        </div>
+    
           <!-- Controles -->
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -82,6 +84,15 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Siguiente</span>
           </a>
-      </div>
-  </div>
+
+<%= link_to 'Test', test_path %>
+
+    <div class="cards">
+    <% Career.all.each do |career| %>
+        <div class="card-trip">
+          <%= cl_image_tag career.photo.key, height: 100, width: 100, crop: :fill %>
+          <div class="card-trip-infos">
+            <h2><%= link_to career.name, career_path(career) %></li></h2>
+            <h2><%= career.area %></li></h2>
+     </div>
 </div>
