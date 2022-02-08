@@ -122,7 +122,6 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px 10px;
@@ -134,6 +133,33 @@
   }
 }
 
+#add-inst {
+  margin-left: 1rem;
+}
+.card-vertical {
+  height: 260px;
+  width: 320px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.6s ease-in-out;
+  }
+  a {
+  color: rgba(255, 255, 255, 0.925);
+  text-decoration: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  }
+}
 .link-to-product {
   font-size: 60x;
   font-weight: bold;
@@ -143,7 +169,6 @@
 .link-to-product:hover {
   color:#040c1c;
 }
-
 .card-booking {
   overflow: hidden;
   width: 80%;
