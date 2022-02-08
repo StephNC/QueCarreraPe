@@ -1,8 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background:white;
 }
-
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
@@ -20,5 +19,19 @@
   .nav-item .log-in {
      margin-right: 80px;
      margin-left: 87px;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin:0% ;
+  ul {
+    text-align: center;
+    align-items: center;
+  }
+  .nav {
+    background-color: white;
+    text-align: center;
   }
 }
