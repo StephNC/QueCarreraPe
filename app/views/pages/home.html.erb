@@ -14,6 +14,9 @@
       %>
       <%= submit_tag "Buscar", class: "btn btn-search ml-3" %>
     <% end %>
+
+<%= link_to 'Test', test_path %>
+
     <div class="cards">
     <% Career.all.each do |career| %>
         <div class="card-trip">
