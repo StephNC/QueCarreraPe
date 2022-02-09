@@ -1,5 +1,5 @@
 // Specific CSS for your home-page
-#container form {
+.container-search form {
     display: flex;
     margin-bottom: 20px;
     align-items: center;
@@ -8,4 +8,13 @@
 body {
   background-color: white;
   margin-top: 0%;
+}
+
+.container-test {
+  background-position: center;
+  background-image: linear-gradient(to right, #7759FF, #1FE0BA);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 15px;
+  color: white;
 }

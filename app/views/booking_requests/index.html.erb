@@ -1,6 +1,15 @@
-<div class= "container">
-  <h1>Mis eventos reservados</h1>
+<div id="container">
+  <div class="banner eventos">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 class="m-0">Mis Eventos Reservados</h1>
+        </div>
+      </div>
+      <%= image_tag "wave1.png" %>
+  </div>
+</div>
 
+<div class= "container">
     <% @bookings.each do |booking| %>
         <div>
           <h2><strong><%=link_to booking.event.name, booking %></strong></h2>

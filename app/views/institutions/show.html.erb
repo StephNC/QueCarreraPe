@@ -1,18 +1,27 @@
+<div class="header">
+  <h1>Instituciones</h1>
+  <a href="https://quecarrerape.herokuapp.com/">HOME</a>
+  <span> / </span> INSTITUCIONES
+</div>
+
 <div class="container">
-  <div class="card-product">
-    <%= cl_image_tag @institution.photo.key, height: 200, width: 200, crop: :fill %>
-    <div class="card-product-infos mt-3 mb-3">
-      <h1><strong><%= @institution.name %></strong></h1>
+  <h1 class = "name-institution text-center mb-5 mt-5"><strong><%= @institution.name.upcase%></strong></h1>
+  <div class = "div-line"></div>
+  <div class = "card-info-institution mb-5 mt-5">
+    <div class="half">
       <p><strong>Dirección: </strong><%= @institution.address %></p>
       <p><strong>Telefono: </strong><%= @institution.phone %></p>
       <p><strong>Correo Institucional: </strong><%= @institution.email %></p>
-      <p><strong>Descripción de la Institución: </strong><%= @institution.description %></p>
       <p><strong>Página principal: </strong><%= @institution.url %></p>
+      <p class = "card-info-description" ><strong>Descripción de la Institución: </strong><%= @institution.description%></p>
+    </div>
+    <div class="half">
+    <%= cl_image_tag @institution.photo.key, crop: :fill %>
     </div>
   </div>
-
-  <%= link_to 'Editar', edit_institution_path(@institution) , class: "btn btn-ghost mt-3 ml-3"  %>
-      <%= link_to 'Eliminar', institution_path(@institution), class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
-      <%= link_to 'Regresar', institutions_path, class: "btn btn-ghost mt-3 ml-3"  %>
-
+  <div class= "text-center" >
+    <%= link_to 'Editar', edit_institution_path(@institution) , class: "btn btn-ghost m-3 mb-5" %>
+    <%= link_to 'Eliminar', institution_path(@institution), class: "btn btn-ghost m-3 mb-5" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
+    <%= link_to 'Regresar', institutions_path, class: "btn btn-ghost m-3 mb-5"  %>
+  </div>
 </div>

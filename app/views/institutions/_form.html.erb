@@ -1,10 +1,10 @@
 <%= simple_form_for institution do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :phone %>
-  <%= f.input :email %>
-  <%= f.input :url %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Guardar", class: "btn btn-dark mb-3 mt-3" %>
+  <%= f.input :name, label: 'Nombre de la institución' %>
+  <%= f.input :address, label: 'Dirección'%>
+  <%= f.input :phone, label: 'Teléfono'%>
+  <%= f.input :email, label: 'Email institucional'%>
+  <%= f.input :url, label: 'Sitio web principal' %>
+  <%= f.input :description, label: 'Descripción' %>
+  <%= f.input :photo, label: 'Imagen de la institución', as: :file %>
+  <%= f.submit "Guardar", class: "btn btn-dark mb-5 mt-3" %>
 <% end %>
