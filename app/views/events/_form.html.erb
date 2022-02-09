@@ -1,10 +1,10 @@
 <%= simple_form_for event do |f| %>
   <%= f.input :name, label: "Título" %>
   <%= f.input :description, label: "Descripción" %>
-  <%= f.input :modality, collection: ["Presencial", "Virtual"] %>
+  <%= f.input :modality, label: "Modalidad", collection: ["Presencial", "Virtual"] %>
   <%= f.input :address, label: "Dirección" %>
   <%= f.input :date, label: "Fecha y hora"%>
-  <%= f.input :photo, as: :file, label: "Imagen" %>
+  <%= f.input :photo, as: :file, label: "Imagen del evento" %>
   <%= f.submit "Guardar", class: "btn btn-dark mb-3 mt-3" %>
 <% end %>
 
