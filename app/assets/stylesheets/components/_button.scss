@@ -6,7 +6,7 @@
   font-weight: lighter;
   opacity: 0.8;
   transition: opacity 0.3s ease;
-  margin: 5px 31px;
+  margin: 5px 25px;
 }
 .btn-ghost:hover {
   opacity: 1;
@@ -38,4 +38,32 @@
 .btn-search:hover {
   background: #27496D;
   color: white;
+}
+
+.btn-test {
+  margin-left: 200px;
+  background: #FFB83F;
+  border:#ffffff;
+  font-weight: 505;
+  font-size: 19px;
+  height: 50px;
+  padding: 12px 40px;
+}
+
+.btn-test-inf {
+  margin: 0;
+  height: 50px;
+  background: #7759FF;
+  border:#ffffff;
+  padding: 12px 70px;
+  font-weight: 550;
+}
+
+.btn-test-submit {
+  background: #FFB83F;
+  border:#ffffff;
+  font-weight: 505;
+  font-size: 19px;
+  height: 50px;
+  padding: 12px 40px;
 }
