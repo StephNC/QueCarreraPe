@@ -9,8 +9,8 @@
   </div>
 </div>
 
-
 <div class="container">
+  <%= link_to 'Atrás', "/", class: "btn btn-ghost m-3" %>
   <%= link_to 'Agregar una nueva institución', new_institution_path , class: "btn btn-ghost mt-5 mb-5" %>
   <div class=" flex-wrap d-flex justify-content-between">
   <% @institutions.each do |institution| %>

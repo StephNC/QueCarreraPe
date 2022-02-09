@@ -1,7 +1,8 @@
 <div class="header">
   <h1>Instituciones</h1>
-  <a href="https://quecarrerape.herokuapp.com/">HOME</a>
-  <span> / </span> INSTITUCIONES
+  <%= link_to 'Atrás', institutions_path, class: "btn btn-ghost m-3" %>
+  <%= link_to 'Editar', edit_institution_path(@institution) , class: "btn btn-ghost m-3" %>
+  <%= link_to 'Eliminar', institution_path(@institution), class: "btn btn-ghost m-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
 </div>
 
 <div class="container">
@@ -18,10 +19,5 @@
     <div class="half">
     <%= cl_image_tag @institution.photo.key, crop: :fill %>
     </div>
-  </div>
-  <div class= "text-center" >
-    <%= link_to 'Editar', edit_institution_path(@institution) , class: "btn btn-ghost m-3 mb-5" %>
-    <%= link_to 'Eliminar', institution_path(@institution), class: "btn btn-ghost m-3 mb-5" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
-    <%= link_to 'Regresar', institutions_path, class: "btn btn-ghost m-3 mb-5"  %>
   </div>
 </div>
