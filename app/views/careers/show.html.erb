@@ -1,7 +1,10 @@
 <div class="header">
   <h1>Carreras</h1>
-  <a href="https://quecarrerape.herokuapp.com/">HOME</a>
-  <span> / </span> Carreras
+  <%= link_to 'Atrás', careers_path, class: "btn btn-ghost m-3"  %>
+  <%= link_to 'Editar', edit_career_path(@career) , class: "btn btn-ghost m-3"  %>
+  <%= link_to 'Eliminar', career_path(@career), class: "btn btn-ghost m-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
+  <%= link_to 'Enlazar carrera-institución', new_career_career_institution_path(@career) , class: "btn btn-ghost m-3"  %>
+
 </div>
 
 <div class= "container">
@@ -41,8 +44,4 @@
 
   </div>
 
-  <%= link_to 'Editar', edit_career_path(@career) , class: "btn btn-ghost mt-3 ml-3"  %>
-  <%= link_to 'Eliminar', career_path(@career), class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
-  <%= link_to 'Regresar', careers_path, class: "btn btn-ghost mt-3 ml-3"  %>
-  <%= link_to 'Enlazar carrera-institución', new_career_career_institution_path(@career) , class: "btn btn-ghost mt-3 ml-3"  %>
 </div>
