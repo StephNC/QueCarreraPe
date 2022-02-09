@@ -1,6 +1,17 @@
+<div id="container">
+  <div class="banner eventos">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 class="m-0">Instituciones</h1>
+        </div>
+      </div>
+      <%= image_tag "wave1.png" %>
+  </div>
+</div>
+
+
 <div class="container">
-  <h1 class="add-inst text-center mt-5 mb-5 fw-bold">INSTITUCIONES</h1>
-  <%= link_to 'Agregar una nueva institución', new_institution_path , class: "btn btn-ghost mb-5" %>
+  <%= link_to 'Agregar una nueva institución', new_institution_path , class: "btn btn-ghost mt-5 mb-5" %>
   <div class=" flex-wrap d-flex justify-content-between">
   <% @institutions.each do |institution| %>
     <div class="card-vertical d-flex" style="background-image:linear-gradient(rgba(223,218,248,0.05), rgba(0,0,0,0.6)), url( <%= cl_image_path(institution.photo.key) %>)">
