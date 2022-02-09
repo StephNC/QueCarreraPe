@@ -1,3 +1,25 @@
+.title-test::before {
+  content: '';
+  background: #FFB83F;
+  height: 5px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transform: translateY(73px);
+}
+
+.title-test::after {
+  content: '';
+  background: #1FE0BA;
+  height: 18px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  display: block;
+  transform: translateY(15px);
+}
 
 .card-checkbox{
 
@@ -14,14 +36,13 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     color: #ffff;
-    background-color: blueviolet;
+    background-color: #7759FF;
     h3 {
       margin: 0px;
       padding-left: 10px;
-      font-size: 23px;
+      font-size: 20px;
     }
 }
-
 
 .circle-number{
     display: flex;
@@ -35,5 +56,6 @@
 }
 
 .answer{
-    padding: 1em .5em;
+
+    padding: 20px 0px 11px 15px;
 }
