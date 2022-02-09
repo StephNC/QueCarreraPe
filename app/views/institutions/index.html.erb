@@ -4,7 +4,7 @@
   <div class=" flex-wrap d-flex justify-content-between">
   <% @institutions.each do |institution| %>
     <div class="card-vertical d-flex" style="background-image:linear-gradient(rgba(223,218,248,0.05), rgba(0,0,0,0.6)), url( <%= cl_image_path(institution.photo.key) %>)">
-      <%= link_to institution.name, institution_path(institution.id) %>
+      <%= link_to institution.name.upcase , institution_path(institution.id) %>
     </div>
   <% end %>
   </div>
