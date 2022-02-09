@@ -1,8 +1,22 @@
 <%= simple_form_for event do |f| %>
   <%= f.input :name, label: "Título" %>
-  <%= f.input :date, label: "Fecha"%>
-  <%= f.input :modality, label: "Modalidad" %>
   <%= f.input :description, label: "Descripción" %>
-  <%= f.input :photo, as: :file, label: "Foto" %>
+  <%= f.input :modality, collection: ["Presencial", "Virtual"] %>
+  <%= f.input :address, label: "Dirección" %>
+  <%= f.input :date, label: "Fecha y hora"%>
+  <%= f.input :photo, as: :file, label: "Imagen" %>
   <%= f.submit "Guardar", class: "btn btn-dark mb-3 mt-3" %>
 <% end %>
+
+<script>
+  const modalitySelector = document.querySelector("#event_modality")
+  const addressSelector = document.querySelector("#event_address")
+  modalitySelector.addEventListener("change", (event)=>{
+    if (event.target.value=="Virtual") {
+      addressSelector.value = ""
+      addressSelector.disabled = true
+    } else {
+      addressSelector.disabled = false
+    }
+  })
+</script>
