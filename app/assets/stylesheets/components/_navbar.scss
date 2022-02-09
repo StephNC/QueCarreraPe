@@ -8,14 +8,12 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 160px;
-  margin-left: 80px;
+
 }
 
 .navbar-nav {
   align-items: center;
-  img {
-  margin-right: 80px;
-  }
+
   .nav-item .log-in {
      margin-right: 80px;
      margin-left: 87px;
@@ -33,5 +31,15 @@
   .nav {
     background-color: white;
     text-align: center;
+
   }
+}
+
+.nav-link-btn {
+      background: #FFB83F;
+      margin-left: 20px;
+    }
+
+.user-name {
+  color: #7759FF;
 }
