@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :events
   has_many :booking_requests
   has_many :reviews
+  has_one_attached :photo
 
   validates :first_name, presence: true, length: { minimum: 2 }
   validates :last_name, presence: true, length: { minimum: 2 }
