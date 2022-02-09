@@ -9,9 +9,11 @@
     <%= cl_image_tag @event.photo.key, height: 200, width: 200, crop: :fill %>
     <div class="card-event-only-infos mt-3 mb-3">
       <h1><strong><%= @event.name %></strong></h1>
-      <p><strong>Fecha: </strong><%= @event.date %></p>
-      <p><strong>Modalidad: </strong><%= @event.modality %></p>
       <p><strong>Descripción del evento: </strong><%= @event.description %></p>
+      <p><strong>Modalidad: </strong><%= @event.modality %></p>
+      <p><strong>Dirección: </strong><%= @event.address %></p>
+      <p><strong>Fecha: </strong><%= @event.date.strftime('%a, %B %d') %></p>
+      <p><strong>Hora: </strong><%= @event.date.strftime("%I:%M %p") %></p>
     </div>
 
     <div>

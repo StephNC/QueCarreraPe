@@ -9,13 +9,16 @@
       <div class="row">
         <div class="col-md-12 text-center">
           <h1 class="m-0">Eventos</h1>
-          <a href="https://quecarrerape.herokuapp.com/">HOME</a>
-          <span> / </span> EVENTOS
         </div>
       </div>
       <%= image_tag "wave1.png" %>
   </div>
 </div>
+
+  <div class="container">
+  <%= link_to 'Atrás', "/", class: "btn btn-ghost m-3" %>
+  <%= link_to 'Agregar un nuevo evento', new_event_path , class: "btn btn-ghost mt-5 mb-5"  %>
+  </div>
 
   <div class= "container">
     <div class="cards-event">
@@ -24,8 +27,8 @@
           <%= cl_image_tag event.photo.key, height: 200, width: 200, crop: :fill %>
           <div class="card-event-infos">
             <h2><strong><%=link_to event.name, event_path(event) %></strong></h2>
-            <h3><i class="fas fa-user-circle" ></i> <%=  event.user.first_name %> <%= event.user.last_name %></h3>
-            <h3><i class="fas fa-calendar-day" ></i> <%=  event.date %></h4>
+            <h3><i class="fas fa-user-circle " ></i><strong> Ponente : </strong><%=  event.user.first_name %> <%= event.user.last_name %></h3>
+            <h3><i class="fas fa-calendar-day " ></i>  <%=  event.date.strftime('%A, %b %d') %> <strong> - </strong> <%=  event.date.strftime("%I:%M %p") %></h3>
           </div>
         </div>
       <% end %>

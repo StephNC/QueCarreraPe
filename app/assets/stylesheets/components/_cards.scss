@@ -122,8 +122,9 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
   padding: 10px 10px;
   .card-product-infos{
     padding-left: 15px;
@@ -248,7 +249,7 @@
 .card-event {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
   border-radius: 8px;
   pointer-events: default;
   width: 285px;
@@ -402,4 +403,3 @@
   }
 
 }
-
