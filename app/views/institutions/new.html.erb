@@ -1,10 +1,9 @@
 <div class= "container">
+  <%= link_to 'Lista de instituciones', institutions_path %>
   <div id="card_signup_create">
-    <h1 class="mb-3">Añadir una nueva carrera</h1>
-
-  <%= render"form", institution: @institution %>
-
-
-  <%= link_to 'Regresar a la lista de instituciones', institutions_path %>
+    <h1 class="m-3 mt-5 text-center">CREA UNA NUEVA INSTITUCIÓN</h1>
+    <div class="card-new">
+      <%= render"form", institution: @institution %>
+    </div>
   </div>
 </div>

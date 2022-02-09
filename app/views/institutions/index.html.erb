@@ -1,15 +1,11 @@
 <div class="container">
-  <h1>Instituciones</h1>
-
-    <% @institutions.each do |institution| %>
-      <div class="card-index">
-        <%= cl_image_tag institution.photo.key, height: 200, width: 200, crop: :fill %>
-        <div class="card-product-infos mt-3 mb-3">
-          <%= link_to institution.name, institution_path(institution.id)%>
-        </div>
-      </div>
-    <% end %>
-
-  <%= link_to 'Agregar una nueva institución', new_institution_path , class: "btn btn-ghost mt-3 ml-3"  %>
-
+  <h1 class="add-inst text-center mt-5 mb-5 fw-bold">INSTITUCIONES</h1>
+  <%= link_to 'Agregar una nueva institución', new_institution_path , class: "btn btn-ghost mb-5" %>
+  <div class=" flex-wrap d-flex justify-content-between">
+  <% @institutions.each do |institution| %>
+    <div class="card-vertical d-flex" style="background-image:linear-gradient(rgba(223,218,248,0.05), rgba(0,0,0,0.6)), url( <%= cl_image_path(institution.photo.key) %>)">
+      <%= link_to institution.name.upcase , institution_path(institution.id) %>
+    </div>
+  <% end %>
+  </div>
 </div>
