@@ -2,7 +2,7 @@
   <div class="card-test">
     <h1 class="title-test text-center">Test Vocacional</h1>
 
-    <form action="/#" id="form">
+    <form action="/#" id="form" novalidate>
 
       <div class="C card-checkbox">
         <div class="question">
@@ -733,10 +733,32 @@
       <br/>
 
       <div class= "d-flex justify-content-center">
-        <input class= "btn btn-dark btn-test-submit d-flex align-items-center" type="submit" value="Enviar test">
+        <button type="submit" class="btn btn-dark btn-test-submit d-flex align-items-center" data-toggle="modal" data-target="#results">
+        Enviar test
+        </button>
       </div>
 
     </form>
   </div>
 
+</div>
+
+<div class="modal fade" id="results" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Resultado del test</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="go-to-career">Ver Carreras</button>
+      </div>
+    </div>
+  </div>
 </div>
