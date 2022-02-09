@@ -4,8 +4,8 @@
         <div class="col-md-6">
           <h1>¿No sabes<strong> qué carrera</strong> estudiar?</h1>
           <p class="promo-title">En <strong>QuéCarreraPe</strong> tenemos la respuesta, súmate y empieza a crear tu futuro hoy mismo.</p>
-          <p class="promo-title">Nuestro test online te ayuda a explorar tus habilidades y descubrir tu vocación ¡hazlo ya! </p>
-          <%= link_to 'Tomar Test Gratuito', test_path, class: "btn btn-dark mt-3 btn-test"%></a>
+          <p class="promo-title">Nuestros eventos te ayudarán a conocer tu carrera perfecta, con experiencias de estudiantes y egresados ¡Inscríbete ya! </p>
+          <%= link_to 'Ver eventos próximos', events_path, class: "btn btn-dark mt-3 btn-test"%></a>
         </div>
         <div class="col-md-6 text-center">
           <img src="https://cdn3d.iconscout.com/3d/premium/thumb/student-holding-book-3297137-2754838.png" alt="" class="img-fluid fig-3D">
@@ -19,21 +19,22 @@
   <div class="iconBox pt-3 text-center mx-3" style="width:280px;">
     <i class="far fa-heart fa-5x icon"></i>
     <h3 class="d-flex justify-content-center align-items-center font-w-700 dark-color align-center" style="min-height:60px;">Sabemos por lo que estás pasando</h3>
-    <p>abc</p>
+    <p>Por eso te ayudamos en este proceso</p>
   </div>
   <div class="iconBox pt-3 text-center mx-3" style="width:280px;">
     <i class="fas fa-laptop fa-5x icon"></i>
     <h3 class="d-flex justify-content-center align-items-center font-w-700 dark-color align-center" style="min-height:60px;">Donde sea que te encuentres</h3>
-    <p>abc</p>
+    <p>Test y charlas virtuales</p>
   </div>
   <div class="iconBox pt-3 text-center mx-3" style="width:280px;">
     <i class="far fa-handshake fa-5x icon"></i>
     <h3 class="d-flex justify-content-center align-items-center font-w-700 dark-color align-center" style="min-height:60px;">Nuestra comunidad está para ti</h3>
-    <p>abc</p>
+    <p>Conoce las experiencias de estudiantes y profesionales</p>
   </div>
 </div>
 
-<div class="container">
+<div class="container container-search">
+<h2 class="title text-center" style="padding-top: 70px">Busca una carrera</h2>
   <%= form_tag careers_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
@@ -42,6 +43,13 @@
     %>
     <%= submit_tag "Buscar", class: "btn btn-search ml-3" %>
   <% end %>
+
+  <div class="container container-test m-width-100" style="text-align: center;">
+    <h2>Toma nuestro test Vocacional</h2>
+    <h4>¿Listo/a para encontrar tu carrera?</h4>
+    <p><strong>Empieza a crear tu futuro hoy mismo</strong></p>
+    <%= link_to 'Tomar Test Gratuito', test_path, class: "btn btn-dark btn-test ml-3" %></a>
+  </div>
 
   <h2 class="title text-center" style="padding-top: 70px">Carreras del futuro</h2>
 
@@ -131,7 +139,7 @@
                       <div class="img-text">
                         <h2><strong>Fernanda Morales</strong></h2>
                         <p>Lima, Perú</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Está página me ayudo a encontrar la carrera perfecta para mí! Pude conocer experiencias de estudiantes y egresados.</p>
                         <p>🤍🤍🤍🤍🤍</p>
                       </div>
                     </div>
@@ -142,7 +150,7 @@
                       <div class="img-text">
                         <h2><strong>Antonio Quispe</strong></h2>
                         <p>Huancayo, Perú</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>No sabía qué estudiar y me comentaron sobre QuéCarrera.PE. Ahora yo doy charlas sobre mi experiencia estudiando ingeniería!.</p>
                         <p>🤍🤍🤍🤍🤍</p>
                       </div>
                     </div>
@@ -153,7 +161,7 @@
                       <div class="img-text">
                         <h2><strong>Roxana Sánchez</strong></h2>
                         <p>Trujillo, Perú</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Siempre quise conocer cómo era estudiar en la UNT, gracias a QuéCarrera.PE, conocí experiencias de universitarios de Trujillo.</p>
                         <p>🤍🤍🤍🤍</p>
                       </div>
                     </div>
@@ -168,7 +176,7 @@
                       <div class="img-text">
                         <h2><strong>Luis Huamán</strong></h2>
                         <p>Huaraz, Perú</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Salí del colegio y no sabía qué estudiar, tomé el test de orientación vocacional y me ayudó a decidirme por el área de Computación.</p>
                         <p>🤍🤍🤍🤍🤍</p>
                       </div>
                     </div>
@@ -179,7 +187,7 @@
                       <div class="img-text">
                         <h2><strong>Maricarmen Patiño</strong></h2>
                         <p>Arequipa, Perú</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Estaba buscando carreras en ciencias, pero no sabía cuál escoger; gracias a QuéCarrera.PE supe cómo es estudiar Física.</p>
                         <p>🤍🤍🤍</p>
                       </div>
                     </div>
@@ -190,7 +198,7 @@
                       <div class="img-text">
                         <h2><strong>Sebastián Rodríguez</strong></h2>
                         <p>Loreto, Perú</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>El test de orientación vocacional me ayudó mucho a decidir que quiero dedicarme a la Agronomía.</p>
                         <p>🤍🤍🤍🤍</p>
                       </div>
                     </div>
@@ -203,11 +211,7 @@
       </div>
     </div>
 
-    <div class="container" style="padding: 90px; text-align: center;">
-      <h2 class="title text-center">Test vocacional</h2>
-      <h4>¿Listo/a para encontrar tu carrera?</h4>
-      <p><strong>Empieza a crear tu futuro hoy mismo</strong></p>
-      <%= link_to 'Tomar Test Gratuito', test_path, class: "btn btn-dark mt-3 btn-test-inf" %></a>
+    <div class="container" style="padding: 90px">
     </div>
   </div>
 </div>
