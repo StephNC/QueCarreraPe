@@ -375,3 +375,31 @@
   margin-bottom: 20px;
   margin-top: 50px;
   }
+
+.card-body {
+  padding: 4.25rem !important;
+  background-color: #6969FF;
+}
+
+.text-muted {
+  color: white;
+}
+
+.card-test {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  padding: 30px;
+  padding-bottom: 50px;
+  margin: 30px auto;
+  width: 700px;
+  h1 {
+      text-align: center;
+      padding-bottom: 20px;
+  }
+
+}
+

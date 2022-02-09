@@ -1,5 +1,5 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top bg-white">
+  <div class="container-fluid ">
       <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "logo3.png"%>
       <% end %>
@@ -8,6 +8,15 @@
       </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <%= link_to "Carreras", careers_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "¿Dónde estudiar?", institutions_path, class: "nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Eventos", events_path, class: "nav-link" %>
+          </li>
         <% if user_signed_in? %>
           <li class="nav-item active">
             <%=current_user.first_name %>
@@ -24,27 +33,10 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <div class ="log-in">
-              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-            </div>
+              <%= link_to "Login", new_user_session_path, class: "nav-link btn btn-dark text-white" %>
           </li>
         <% end %>
       </ul>
     </div>
-  </div>
-</div>
-<div class= "container sticky-top bg-white">
-  <div class="links">
-      <ul class="nav">
-        <li>
-          <%= link_to "CARRERAS", careers_path, class: "nav-link  text-muted" %>
-        </li>
-        <li class="text-muted">
-          <%= link_to "¿DÓNDE ESTUDIAR?", institutions_path, class: "nav-link text-muted"%>
-        </li>
-        <li class="nav-item">
-          <%= link_to "EVENTOS", events_path, class: "nav-link text-muted" %>
-        </li>
-      </ul>
   </div>
 </div>

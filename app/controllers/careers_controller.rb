@@ -33,7 +33,6 @@ class CareersController < ApplicationController
   end
 
   def update
-    @career.user = current_user
     @career.update(career_params)
 
     redirect_to career_path(@career)

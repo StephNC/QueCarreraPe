@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get "/test", to: "pages#test"
 
   resources :careers do
     resources :reviews, only: [:create]
