@@ -34,7 +34,7 @@
 </div>
 
 <div class="container container-search">
-<h2 class="title text-center" style="padding-top: 70px">Busca una carrera</h2>
+  <h2 class="title text-center" style="padding-top: 70px">Busca una carrera</h2>
   <%= form_tag careers_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
@@ -43,7 +43,9 @@
     %>
     <%= submit_tag "Buscar", class: "btn btn-search ml-3" %>
   <% end %>
+</div>
 
+  <h2 class="title text-center" style="padding-top: 70px">Test Vocacional</h2>
   <div class="container container-test m-width-100" style="text-align: center;">
     <h2>Toma nuestro test Vocacional</h2>
     <h4>¿Listo/a para encontrar tu carrera?</h4>

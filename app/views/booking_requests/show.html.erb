@@ -1,3 +1,4 @@
+<div id="container">
 <div class="header">
   <h1>Mis Eventos Reservados</h1>
   <%= link_to 'Atrás', booking_requests_path, class: "btn btn-ghost mt-3 ml-3" %>
@@ -23,4 +24,5 @@
         <%= cl_image_tag @booking.event.photo.key, crop: :fill %>
       </div>
     </div>
+</div>
 </div>
