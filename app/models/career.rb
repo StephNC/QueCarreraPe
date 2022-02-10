@@ -1,6 +1,7 @@
 class Career < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :career_institutions
+  has_many :institutions, through: :career_institutions
   has_one_attached :photo
 
   validates :name, presence: true, length: { minimum: 2 }
@@ -13,6 +14,6 @@ class Career < ApplicationRecord
   pg_search_scope :search_by_name_and_area,
     against: [ :name, :area ],
     using: {
-      tsearch: { prefix: true } 
+      tsearch: { prefix: true }
     }
 end
