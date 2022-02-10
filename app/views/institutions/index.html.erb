@@ -14,8 +14,10 @@
   <%= link_to 'Agregar una nueva institución', new_institution_path , class: "btn btn-ghost mb-2" %>
   <div class=" flex-wrap d-flex justify-content-between">
     <% @institutions.each do |institution| %>
-    <div class="card-vertical d-flex" style="background-image:linear-gradient(rgba(223,218,248,0.05), rgba(0,0,0,0.6)), url( <%= cl_image_path(institution.photo.key) %>)">
-      <%= link_to institution.name.upcase , institution_path(institution.id) %>
+    <div data-aos="zoom-out">
+      <div class="card-vertical d-flex" style="background-image:linear-gradient(rgba(223,218,248,0.05), rgba(0,0,0,0.6)), url( <%= cl_image_path(institution.photo.key) %>)">
+        <%= link_to institution.name.upcase , institution_path(institution.id) %>
+      </div>
     </div>
   <% end %>
   </div>

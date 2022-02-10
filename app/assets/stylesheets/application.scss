@@ -11,4 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "components/footer";
+@import "components/sign-in";
 @import "pages/index";
+
+body {
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 2.5rem;
+}
