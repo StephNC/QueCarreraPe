@@ -22,7 +22,11 @@
 
 <div class="container">
   <div class="card-event-only">
-    <%= cl_image_tag @event.photo.key, height: 300, width: 300, crop: :fill %>
+    <% if @event.photo.key.nil? %>
+      <%= image_tag "https://cdn-icons-png.flaticon.com/512/43/43132.png", class: "avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    <% else %>
+      <%= cl_image_tag @event.photo.key, height: 300, width: 300, crop: :fill %>
+    <% end %>
     <div class="card-event-only-infos mt-3 mb-3" style="padding-right:30px">
       <br>
       <p><strong>Descripción del evento: </strong><%= @event.description %></p>
