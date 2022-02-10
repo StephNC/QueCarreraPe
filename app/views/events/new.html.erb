@@ -1,13 +1,18 @@
-<div class="header">
-  <h1>Eventos</h1>
-  <%= link_to 'Atrás', "/events", class: "btn btn-ghost m-3" %>
+<div id="container">
+  <div class="banner eventos">
+      <div class="row">
+        <div class="col-md-12 text-center">
+         <h1 class="m-3 mt-3 text-center">Agregar un Evento</h1>
+        </div>
+      </div>
+      <%= image_tag "wave1.png" %>
+  </div>
 </div>
-
 <div class= "container">
   <div id="card_signup_create">
-    <h1 class="m-3 mt-5 text-center">CREA UNA NUEVO EVENTO</h1>
     <div class="card-new">
       <%= render"form", event: @event %>
     </div>
+    <%= link_to 'Regresar a la lista de Eventos', "/events", class: "btn btn-ghost m-5" %>
   </div>
 </div>

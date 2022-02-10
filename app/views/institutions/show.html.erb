@@ -1,12 +1,18 @@
-<div class="header">
-  <h1>Instituciones</h1>
-  <%= link_to 'Atrás', institutions_path, class: "btn btn-ghost m-3" %>
-  <%= link_to 'Editar', edit_institution_path(@institution) , class: "btn btn-ghost m-3" %>
-  <%= link_to 'Eliminar', institution_path(@institution), class: "btn btn-ghost m-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
+<div id="container">
+  <div class="banner eventos">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 class="m-0"><strong><%= @institution.name.upcase%></strong></h1>
+        </div>
+      </div>
+      <%= image_tag "wave1.png" %>
+  </div>
 </div>
 
 <div class="container">
-  <h1 class = "name-institution text-center mb-5 mt-5"><strong><%= @institution.name.upcase%></strong></h1>
+  <%= link_to 'Atrás', institutions_path, class: "btn btn-ghost m-3" %>
+  <%= link_to 'Editar', edit_institution_path(@institution) , class: "btn btn-ghost m-3" %>
+  <%= link_to 'Eliminar', institution_path(@institution), class: "btn btn-ghost m-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
   <div class = "div-line"></div>
   <div class = "card-info-institution mb-5 mt-5">
     <div class="half">
