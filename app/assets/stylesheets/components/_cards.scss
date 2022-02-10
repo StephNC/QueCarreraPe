@@ -256,9 +256,9 @@
 }
 
 .card-event > img {
-  height: 180px;
+  height: 200px;
   width: 100%;
-  position: relative;
+  object-fit: cover;
 }
 
 .card-event h3 {

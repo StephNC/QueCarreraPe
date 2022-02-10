@@ -9,54 +9,56 @@
   </div>
 </div>
 
+<div class="container">
+  <%= link_to "Atrás", :back, class: "btn btn-ghost m-5" %>
+</div>
+
 <div class= "container">
   <div id="card_signup_create">
-    <div class="card-new">
+    <div class="card-new" style="margin-top:0">
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
 
         <div class="form-inputs">
-          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :email, required: true, autofocus: true, label: "Correo electrónico" %>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
           <% end %>
 
           <%= f.input :first_name,
-                      required: true%>
+                      required: true, label: "Nombre"%>
           <%= f.input :last_name,
-                      required: true%>
+                      required: true, label: "Apellido"%>
           <%= f.input :age,
-                      required: true%>
+                      required: true, label: "Edad"%>
           <%= f.input :address,
-                      required: true%>
+                      required: true, label: "Ciudad"%>
           <%= f.input :about_me,
-                      required: true%>
-          <%= f.input :password,
-                      hint: "leave it blank if you don't want to change it",
+                      required: true, label: "Sobre mi"%>
+          <%= f.input :password, label: "Nueva contraseña",
+                      hint: "deja en blanco si no deseas cambiar tu contraseña",
                       required: false,
                       input_html: { autocomplete: "new-password" } %>
-          <%= f.input :password_confirmation,
+          <%= f.input :password_confirmation, label: "Confirma tu nueva contraseña",
                       required: false,
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :current_password,
-                      hint: "we need your current password to confirm your changes",
-                      required: true,
+                      hint: "necesitamos tu contraseña actual para confirmar los cambios",
+                      required: true, label: "Contraseña actual",
                       input_html: { autocomplete: "current-password" } %>
-          <%= f.input :photo,
+          <%= f.input :photo, label: "Foto",
                       as: :file %>
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Update", class: "btn btn-ghost m-5"%>
+          <%= f.button :submit, "Actualizar", class: "btn btn-ghost m-5"%>
         </div>
       <% end %>
 
       <div class = "div-line" style="padding:20px"></div>
-      <h3>Cancel my account</h3>
-
-      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-ghost m-5" %></p>
-      <%= link_to "Back", :back, class: "btn btn-ghost m-5" %>
+      <h3>Eliminar mi cuenta</h3>
+      <p>¿Disconforme? <%= link_to "Eliminar cuenta", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-ghost m-5" %></p>
   </div>
 </div>
