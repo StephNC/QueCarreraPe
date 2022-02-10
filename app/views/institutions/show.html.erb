@@ -18,11 +18,18 @@
   <div class = "div-line"></div>
   <div class = "card-info-institution mb-5 mt-5">
     <div class="half">
+      <h2 class= "mb-3"><strong>Información Básica</strong></h2>
       <p><strong>Dirección: </strong><%= @institution.address %></p>
       <p><strong>Telefono: </strong><%= @institution.phone %></p>
       <p><strong>Correo Institucional: </strong><%= @institution.email %></p>
       <p><strong>Página principal: </strong><%= @institution.url %></p>
       <p class = "card-info-description" ><strong>Descripción de la Institución: </strong><%= @institution.description%></p>
+      <h2 class ="pt-5"><strong>Carreras</strong></h2>
+      <ul>
+      <% @institution.careers.each do |career| %>
+        <li><%=link_to career.name, career_path(career) %></li>
+      <% end %>
+      </ul>
     </div>
     <div class="half">
     <% if @institution.photo.key.nil? %>
@@ -33,11 +40,3 @@
     </div>
   </div>
 </div>
-
-<div>
-    <ul>
-    <% @institution.careers.each do |career| %>
-      <li><%=link_to career.name, career_path(career) %></li>
-    <% end %>
-    </ul>
-  </div>

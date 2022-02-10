@@ -33,6 +33,7 @@
   </div>
 
   <div>
+    <h2 class= "mb-5"><strong>Instituciones que ofrecen la carrera</strong></h2>
     <ul>
     <% @career.institutions.each do |institution| %>
       <li><%=link_to institution.name, institution_path(institution) %></li>
