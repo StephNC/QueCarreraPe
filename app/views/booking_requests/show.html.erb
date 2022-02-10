@@ -1,14 +1,20 @@
 <div id="container">
-<div class="header">
-  <h1>Mis Eventos Reservados</h1>
-  <%= link_to 'Atrás', booking_requests_path, class: "btn btn-ghost mt-3 ml-3" %>
-  <%= link_to 'Cancelar reserva', @booking, class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
+  <div class="banner eventos">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="m-0"><%= @booking.event.name %></strong></h1>
+      </div>
+    </div>
+    <%= image_tag "wave1.png" %>
+  </div>
 </div>
 
-<div class="container">
-  <h1 class = "name-institution text-center mb-5 mt-5"><strong><%= @booking.event.name.upcase%></strong></h1>
-  <div class = "div-line"></div>
-    <div class = "card-info-institution mb-5 mt-5" style="padding-bottom:90px">
+<div class= "container">
+  <%= link_to 'Atrás', booking_requests_path, class: "btn btn-ghost mt-3 ml-3" %>
+  <%= link_to 'Cancelar reserva', @booking, class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
+  <br>
+  <div class = "div-line" style="margin: 35px auto 0 auto"></div>
+    <div class = "card-info-booking mb-5 mt-5" style="padding-bottom:90px">
       <div class="half" style="padding-left:30px">
         <h3><strong>Detalles de mi reserva</strong></h3> <br>
         <p><strong>Nombre del evento: </strong><%= @booking.event.name %></p>
@@ -24,5 +30,5 @@
         <%= cl_image_tag @booking.event.photo.key, crop: :fill %>
       </div>
     </div>
-</div>
+  </div>
 </div>
