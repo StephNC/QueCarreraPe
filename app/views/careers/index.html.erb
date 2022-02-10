@@ -11,8 +11,9 @@
 
 <div class="container">
   <%= link_to 'Atrás', "/", class: "btn btn-ghost mb-2" %>
+  <% if current_user.admin == true %>
   <%= link_to 'Agregar una nueva carrera', new_career_path , class: "btn btn-ghost mb-2"  %>
-
+  <% end %>
   <div class="flex-wrap d-flex justify-content-between">
     <% @careers.each do |career| %>
       <div class="card-vertical d-flex" style="background-image:linear-gradient(rgba(223,218,248,0.05), rgba(0,0,0,0.6)), url( <%= cl_image_path(career.photo.key) %>)">
