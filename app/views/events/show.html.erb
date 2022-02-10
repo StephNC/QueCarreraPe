@@ -31,7 +31,9 @@
       <br>
       <p><strong>Descripción del evento: </strong><%= @event.description %></p>
       <p><strong>Modalidad: </strong><%= @event.modality %></p>
+      <% if @event.address %>
       <p><strong>Dirección: </strong><%= @event.address %></p>
+      <% end %>
       <p><strong>Fecha: </strong><%= @event.date.strftime('%A, %B %d - %Y') %></p>
       <p style="margin-bottom: -5px"><strong>Hora: </strong><%= @event.date.strftime("%I:%M %p") %></p>
     </div>
