@@ -307,7 +307,7 @@
 
 .card-event-only {
   overflow: hidden;
-  height: 480px;
+  height: 450px;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -318,7 +318,7 @@
 }
 
 .card-event-only .card-event-only-infos {
-  padding: 30px;
+  padding: 80px;
   margin: 30px;
   padding-right: 60px;
   p{
@@ -428,4 +428,24 @@
     padding: 50px;
     margin-top: 60px;
   }
+}
+
+.card-info-booking {
+  display: flex;
+  width: 100%;
+  .half {
+    p {
+    word-break: break-all;
+    hyphens: auto;
+    font-size: 20px;
+    }
+    img {
+      height: 520px;
+      width: 500px;
+      object-fit: cover;
+      border-radius: 7px;
+      margin-left:160px;
+      margin-right: 0px;
+    }
+}
 }
