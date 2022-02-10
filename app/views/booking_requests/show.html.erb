@@ -1,30 +1,28 @@
 <div id="container">
-  <div class="banner eventos">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h1 class="m-0"><strong><%= @booking.event.name %></strong></h1>
-        </div>
-      </div>
-      <%= image_tag "wave1.png" %>
-  </div>
+<div class="header">
+  <h1>Mis Eventos Reservados</h1>
+  <%= link_to 'Atrás', booking_requests_path, class: "btn btn-ghost mt-3 ml-3" %>
+  <%= link_to 'Cancelar reserva', @booking, class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
 </div>
 
-<div class= "container-booking">
-  <h1><strong>Detalles de mi reserva: </strong></h1>
-    <div class="card-booking mb-3">
-      <h2><strong><%= @booking.event.name %></strong></h2>
-      <p>Reservado el: <%= @booking.created_at %></p>
-      <div>
-            <h3><strong>Información del contacto</strong></h3>
-            <p>Nombre: <%=  @booking.user.first_name %></p>
-            <p>Apellido: <%= @booking.user.last_name %></p>
-            <p>Correo electrónico: <%= @booking.user.email %></p>
+<div class="container">
+  <h1 class = "name-institution text-center mb-5 mt-5"><strong><%= @booking.event.name.upcase%></strong></h1>
+  <div class = "div-line"></div>
+    <div class = "card-info-institution mb-5 mt-5" style="padding-bottom:90px">
+      <div class="half" style="padding-left:30px">
+        <h3><strong>Detalles de mi reserva</strong></h3> <br>
+        <p><strong>Nombre del evento: </strong><%= @booking.event.name %></p>
+        <p><strong>Reservado el: </strong><%= @booking.created_at %></p>  <br>
+        <br>
+        <h3><strong>Información del contacto</strong></h3>  <br>
+        <p><strong>Nombre: </strong><%= @booking.user.first_name %></p>
+        <p><strong>Apellido: </strong><%= @booking.user.last_name %></p>
+        <p><strong>Correo electrónico: </strong><%= @booking.user.email %></p>
+      </div>
+
+      <div class="half">
+        <%= cl_image_tag @booking.event.photo.key, crop: :fill %>
       </div>
     </div>
-
-    <div>
-      <%= link_to 'Cancelar reserva', @booking, class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
-    </div>
-
-    <%= link_to 'Regresar a mis reservas actuales', booking_requests_path, class: "btn btn-ghost mt-3 ml-3"  %>
+</div>
 </div>

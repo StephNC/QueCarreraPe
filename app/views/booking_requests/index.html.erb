@@ -10,12 +10,13 @@
 </div>
 
 <div class= "container">
+  <%= link_to 'Atrás', "/", class: "btn btn-ghost m-3" %>
+  <div class=" flex-wrap d-flex justify-content-between">
     <% @bookings.each do |booking| %>
-        <div>
-          <h2><strong><%=link_to booking.event.name, booking %></strong></h2>
-                  <%= cl_image_tag booking.event.photo.key, height: 200, width: 200, crop: :fill %>
-                  <p>Fecha: <%=  booking.event.date %></p>
-                  <p>Modalidad: <%= booking.event.modality %></p>
-        </div>
+      <div class="card-vertical d-flex" style="background-image:linear-gradient(rgba(223,218,248,0.05), rgba(0,0,0,0.6)), url(<%= cl_image_path(booking.event.photo.key) %>)">
+        <h2 style="text-align:center"><strong><%= link_to booking.event.name.upcase, booking %></strong></h2>
+        <p style="color:white"><i class="fas fa-calendar-day"></i> <%= booking.event.date.strftime('%a, %b %d') %> <strong> - </strong> <%= booking.event.date.strftime("%I:%M %p") %></p>
+      </div>
     <% end %>
+  </div>
 </div>
