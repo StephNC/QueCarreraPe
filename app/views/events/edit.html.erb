@@ -1,10 +1,13 @@
+<div class="header">
+  <h1>Eventos</h1>
+  <%= link_to 'Atrás', "/events", class: "btn btn-ghost m-3" %>
+</div>
+
 <div class= "container">
   <div id="card_signup_create">
-    <h1 class="mb-3">Editar un evento</h1>
-
-  <%= render"form", event: @event %>
-
-
-  <%= link_to 'Regresar a la lista de eventos', events_path %>
+    <h1 class="m-3 mt-5 text-center">EDITAR MI EVENTO</h1>
+    <div class="card-new">
+      <%= render"form", event: @event %>
+    </div>
   </div>
 </div>

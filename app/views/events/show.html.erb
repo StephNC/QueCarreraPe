@@ -1,30 +1,26 @@
 <div class="header">
   <h1>Eventos</h1>
-  <a href="https://quecarrerape.herokuapp.com/">HOME</a>
-  <span> / </span> EVENTOS
+  <% if current_user == @event.user %>
+        <%= link_to 'Editar', edit_event_path(@event) , class: "btn btn-ghost mt-3 ml-3"  %>
+        <%= link_to 'Eliminar', event_path(@event), class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
+        <%= link_to 'Atrás', events_path, class: "btn btn-ghost mt-3 ml-3"  %>
+  <% else %>
+        <%= link_to 'Atrás', events_path, class: "btn btn-ghost mt-3 ml-3"  %>
+        <%= link_to 'Inscribirme', register_event_path(@event), method: :post, class: "btn btn-ghost mt-3 ml-3" %>
+  <% end %>
 </div>
 
 <div class="container">
   <div class="card-event-only">
-    <%= cl_image_tag @event.photo.key, height: 200, width: 200, crop: :fill %>
-    <div class="card-event-only-infos mt-3 mb-3">
-      <h1><strong><%= @event.name %></strong></h1>
+    <%= cl_image_tag @event.photo.key, height: 300, width: 300, crop: :fill %>
+    <div class="card-event-only-infos mt-3 mb-3" style="padding-right:30px">
+      <h1 style="text-align:center"><strong><%= @event.name %></strong></h1>
+      <br>
       <p><strong>Descripción del evento: </strong><%= @event.description %></p>
       <p><strong>Modalidad: </strong><%= @event.modality %></p>
       <p><strong>Dirección: </strong><%= @event.address %></p>
-      <p><strong>Fecha: </strong><%= @event.date.strftime('%a, %B %d') %></p>
-      <p><strong>Hora: </strong><%= @event.date.strftime("%I:%M %p") %></p>
-    </div>
-
-    <div>
-      <% if current_user == @event.user %>
-        <%= link_to 'Editar', edit_event_path(@event) , class: "btn btn-ghost mt-3 ml-3"  %>
-        <%= link_to 'Eliminar', event_path(@event), class: "btn btn-ghost mt-3 ml-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
-        <%= link_to 'Regresar', events_path, class: "btn btn-ghost mt-3 ml-3"  %>
-      <% else %>
-        <%= link_to 'Regresar', events_path, class: "btn btn-ghost mt-3 ml-3"  %>
-        <%= link_to 'Inscribirme', register_event_path(@event), method: :post, class: "btn btn-ghost" %>
-      <% end %>
+      <p><strong>Fecha: </strong><%= @event.date.strftime('%A, %B %d - %Y') %></p>
+      <p style="margin-bottom: -5px"><strong>Hora: </strong><%= @event.date.strftime("%I:%M %p") %></p>
     </div>
   </div>
 </div>
