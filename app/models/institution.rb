@@ -1,5 +1,6 @@
 class Institution < ApplicationRecord
   has_many :career_institutions
+  has_many :careers, through: :career_institutions
   has_one_attached :photo
 
   # has_many :careers, through: :career_institutions

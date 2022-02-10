@@ -27,3 +27,11 @@
     </div>
   </div>
 </div>
+
+<div>
+    <ul>
+    <% @institution.careers.each do |career| %>
+      <li><%=link_to career.name, career_path(career) %></li>
+    <% end %>
+    </ul>
+  </div>
