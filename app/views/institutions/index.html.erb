@@ -11,12 +11,17 @@
 
 <div class="container">
   <%= link_to 'Atrás', "/", class: "btn btn-ghost mb-2" %>
-  <% if current_user.admin == true %>
+  <% if user_signed_in? && current_user.admin == true %>
     <%= link_to 'Agregar una nueva institución', new_institution_path , class: "btn btn-ghost mb-2" %>
   <% end %>
   <div class=" flex-wrap d-flex justify-content-between">
     <% @institutions.each do |institution| %>
-    <div class="card-vertical d-flex" style="background-image:linear-gradient(rgba(223,218,248,0.05), rgba(0,0,0,0.6)), url( <%= cl_image_path(institution.photo.key) %>)">
+    <div class="card-vertical d-flex" style="background-image:linear-gradient(rgba(223,218,248,0.05), rgba(0,0,0,0.6)), url(
+    <% if institution.photo.key.nil? %>
+      <%= image_tag "https://cdn-icons-png.flaticon.com/512/43/43132.png", class: "avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    <% else %>
+      <%= cl_image_path(institution.photo.key) %>
+    <% end %> )">
       <%= link_to institution.name.upcase , institution_path(institution.id) %>
     </div>
   <% end %>
