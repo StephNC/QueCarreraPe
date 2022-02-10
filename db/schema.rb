@@ -119,7 +119,6 @@ ActiveRecord::Schema.define(version: 2022_02_10_193443) do
     t.string "address", null: false
     t.integer "user_type", default: 0, null: false
     t.text "about_me", null: false
-    t.string "photo"
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
