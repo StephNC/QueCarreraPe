@@ -16,6 +16,8 @@
   <% end %>
   <div class=" flex-wrap d-flex justify-content-between">
     <% @institutions.each do |institution| %>
+
+    <div data-aos="zoom-out">
     <div class="card-vertical d-flex" style="background-image:linear-gradient(rgba(223,218,248,0.05), rgba(0,0,0,0.6)), url(
     <% if institution.photo.key.nil? %>
       <%= image_tag "https://cdn-icons-png.flaticon.com/512/43/43132.png", class: "avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -23,6 +25,7 @@
       <%= cl_image_path(institution.photo.key) %>
     <% end %> )">
       <%= link_to institution.name.upcase , institution_path(institution.id) %>
+      </div>
     </div>
   <% end %>
   </div>

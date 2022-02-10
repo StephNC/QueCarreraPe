@@ -1,6 +1,8 @@
-<div class="container">
-  <div class="card-log-ing">
-    <h1>Log in</h1>
+<div class="container-net" onclick="onclick">
+  <div class="top"></div>
+  <div class="bottom"></div>
+  <div class="center">
+    <h2>Ingresar</h2>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
         <%= f.input :email,
@@ -10,13 +12,14 @@
         <%= f.input :password,
                     required: false,
                     input_html: { autocomplete: "current-password" } %>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <%# <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Log in", class:"btn btn-primary mb-3"%>
+        <%= f.button :submit, "Log in" %>
       </div>
-     <%= render "devise/shared/links", class: "mb-3"%>
+     <%= render "devise/shared/links"%>
     <% end %>
+    <h2>&nbsp;</h2>
   </div>
 </div>

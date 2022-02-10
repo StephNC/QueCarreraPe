@@ -5,21 +5,16 @@
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
-
 .navbar-lewagon .navbar-brand img {
   width: 160px;
-
 }
-
 .navbar-nav {
   align-items: center;
-
   .nav-item .log-in {
      margin-right: 80px;
      margin-left: 87px;
   }
 }
-
 .links {
   display: flex;
   justify-content: center;
@@ -31,16 +26,18 @@
   .nav {
     background-color: white;
     text-align: center;
-
   }
 }
-
 .nav-link-btn {
   background: #FFB83F;
   margin-left: 20px;
+
+}
+
   border: white;
   font-size: 500 !important;
 }
+
 
 .user-name {
   color: black;
