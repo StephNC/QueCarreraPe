@@ -1,8 +1,14 @@
-<div class="header">
-  <h1>Mis Eventos Reservados</h1>
-  <a href="https://quecarrerape.herokuapp.com/">HOME</a>
-  <span> / </span> Mis Eventos Reservados
+<div id="container">
+  <div class="banner eventos">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 class="m-0"><strong><%= @booking.event.name %></strong></h1>
+        </div>
+      </div>
+      <%= image_tag "wave1.png" %>
+  </div>
 </div>
+
 <div class= "container-booking">
   <h1><strong>Detalles de mi reserva: </strong></h1>
     <div class="card-booking mb-3">
