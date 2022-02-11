@@ -24,19 +24,22 @@
       <p><strong>Correo Institucional: </strong><%= @institution.email %></p>
       <p><strong>Página principal: </strong><%= @institution.url %></p>
       <p class = "card-info-description" ><strong>Descripción de la Institución: </strong><%= @institution.description%></p>
-      <h2 class ="pt-5"><strong>Carreras</strong></h2>
-      <ul>
-      <% @institution.careers.each do |career| %>
-        <li><%=link_to career.name, career_path(career) %></li>
-      <% end %>
-      </ul>
     </div>
     <div class="half">
-    <% if @institution.photo.key.nil? %>
-      <%= image_tag "https://cdn-icons-png.flaticon.com/512/43/43132.png", class: "avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-    <% else %>
-      <%= cl_image_tag @institution.photo.key, crop: :fill %>
-    <% end %>
+      <% if @institution.photo.key.nil? %>
+        <%= image_tag "https://cdn-icons-png.flaticon.com/512/43/43132.png", class: "avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <% else %>
+        <%= cl_image_tag @institution.photo.key, crop: :fill %>
+      <% end %>
     </div>
   </div>
+  <div>
+      <h2 class ="pt-5"><strong>Carreras</strong></h2>
+      <ol id="lista2">
+        <% @institution.careers.each do |career| %>
+          <li><%=link_to career.name, career_path(career) %></li>
+        <% end %>
+      </ol>
+  </div>
+
 </div>

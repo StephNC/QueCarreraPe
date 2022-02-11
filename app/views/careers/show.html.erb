@@ -24,7 +24,6 @@
       <%= cl_image_tag @career.photo.key, width: 400, crop: :fill %>
     <% end %>
     <div class="card-product-infos mt-3 mb-3">
-
       <p><strong>Área: </strong><%= @career.area %></p>
       <p><strong>Duración: </strong><%= @career.duration %></p>
       <p><strong>Perfil del estudiante: </strong><%= @career.profile %></p>
@@ -34,11 +33,11 @@
 
   <div>
     <h2 class= "mb-5"><strong>Instituciones que ofrecen la carrera</strong></h2>
-    <ul>
+    <ol id="lista2">
     <% @career.institutions.each do |institution| %>
       <li><%=link_to institution.name, institution_path(institution) %></li>
     <% end %>
-    </ul>
+    </ol>
   </div>
 
   <div class="card-review">
@@ -68,9 +67,4 @@
     </div>
 
   </div>
-
-
-
-
-
 </div>
