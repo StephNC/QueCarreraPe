@@ -1,4 +1,4 @@
 meta_product_name: "QueCarrera"
 meta_title: "QueCarrera - El mejor lugar para elegir la carrera correcta"
 meta_description: "En QueCarrera buscamos que los jóvenes se informen con experiencias reales, amplíen su perspectiva y con ello puedan elegir de la mejor manera que estudiar y donde hacerlo."
-meta_image: "cover.png" # should exist in `app/assets/images/`
+meta_image: "Cover.png" # should exist in `app/assets/images/`
