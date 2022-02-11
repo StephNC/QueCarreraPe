@@ -17,17 +17,20 @@
     <%= link_to 'Enlazar carrera-institución', new_career_career_institution_path(@career) , class: "btn btn-ghost m-3"  %>
   <% end %>
 
-  <div class="card-product">
-    <% if @career.photo.key.nil? %>
-      <%= image_tag "https://cdn-icons-png.flaticon.com/512/43/43132.png", class: "avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-    <% else %>
-      <%= cl_image_tag @career.photo.key, width: 400, crop: :fill %>
-    <% end %>
-    <div class="card-product-infos mt-3 mb-3">
+  <div class = "div-line"></div>
+  <div class = "card-info-institution mb-5 mt-5 pr-3">
+    <div class="half ml-5">
       <p><strong>Área: </strong><%= @career.area %></p>
       <p><strong>Duración: </strong><%= @career.duration %></p>
       <p><strong>Perfil del estudiante: </strong><%= @career.profile %></p>
       <p><strong>Descripción de la carrera: </strong><%= @career.description %></p>
+    </div>
+    <div class="half">
+      <% if @career.photo.key.nil? %>
+        <%= image_tag "https://cdn-icons-png.flaticon.com/512/43/43132.png", class: "avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <% else %>
+        <%= cl_image_tag @career.photo.key, width: 400, crop: :fill %>
+      <% end %>
     </div>
   </div>
 
