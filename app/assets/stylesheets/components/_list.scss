@@ -1,0 +1,52 @@
+#lista2 {
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+#lista2 ol {
+    margin: 0 0 0 2em;
+}
+
+#lista2 li{
+    position: relative;
+    display: block;
+    padding: .7em .4em .7em 2em;
+    *padding: .4em;
+    margin: 20px;
+    color: #444;
+    text-decoration: none;
+    font-size: 1.3em;
+    border-radius: 2em;
+    &:hover {
+    box-shadow: 0 0 15px rgba(119, 89, 255, 0.5);
+    transform: scale(1.1);
+    transition: all .5s ease-in;
+  }
+}
+
+#lista2 li:hover{
+  background: rgba(119, 89, 255, 0.1);
+}
+
+#lista2 li:before{
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #1FE0BA;
+  //height: 2em;
+  width: 39px;
+  line-height: 2em;
+  border: .3em solid #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all .5s ease-out;
+}

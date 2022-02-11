@@ -332,6 +332,9 @@
 .card-info-institution {
   display: flex;
   width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
   .half {
     p {
     word-break: break-all;
