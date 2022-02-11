@@ -16,8 +16,8 @@
     <%= link_to 'Eliminar', institution_path(@institution), class: "btn btn-ghost m-3" ,method: :delete, data: { confirm: "¿Estás seguro?" } %>
   <% end %>
   <div class = "div-line"></div>
-  <div class = "card-info-institution mb-5 mt-5">
-    <div class="half">
+  <div class = "card-info-institution mb-5 mt-5 pr-3">
+    <div class="half ml-5">
       <h2 class= "mb-3"><strong>Información Básica</strong></h2>
       <p><strong>Dirección: </strong><%= @institution.address %></p>
       <p><strong>Telefono: </strong><%= @institution.phone %></p>
@@ -34,7 +34,7 @@
     </div>
   </div>
   <div>
-      <h2 class ="pt-5"><strong>Carreras</strong></h2>
+      <h2 class ="pt-5"><strong>Carreras disponibles</strong></h2>
       <ol id="lista2">
         <% @institution.careers.each do |career| %>
           <li><%=link_to career.name, career_path(career) %></li>
