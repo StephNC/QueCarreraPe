@@ -12,15 +12,16 @@ footer {
   width: 100%;
 }
 .footer {
-  background: rgba(0,0,0,0.9);
+  background: #ebf4fa;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 105px;
-  padding: 0px 50px;
-  color: rgba(45,201,220,0.8);
+  padding: 40px;
   text-decoration: none;
   bottom:0;
+  font-size: 15px;
+  color: #030929;
+  margin-top: 20px;
 }
 
 .footer-links {
@@ -29,22 +30,27 @@ footer {
   flex-direction: column;
   line-height: 10px;
 }
+.footer-links-individual {
+  margin-top: 18px;
+}
 .footer-links a {
-  color: #E5A02B;
-  opacity: 0.8;
+  color: #7759FF;
+
   text-decoration: none;
-  font-size: 24px;
+  font-size: 35px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
-  color: #7759FF;
-  opacity: 1;
+  color: #1FE0BA;
+
 }
 .footer .fa-heart {
   color: #7759FF;
 }
 .footer-quecarrera {
-  font-size: 25px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #FFB83F;
 }
 .footer-members {
   display: flex;
@@ -55,13 +61,13 @@ footer {
 .footer-members a {
   text-decoration: none;
   line-height: 21px;
-  color: rgba(255,255,255,0.9);
-  opacity:0.8;
+  color: #030929;
+
 
 }
 .footer-members a:hover {
-  color: #7759FF;
-  opacity: 1;
+  color: #FFB83F;
+
 }
 
 .footer-copyright {
@@ -71,16 +77,16 @@ footer {
   justify-content: center;
 }
 .footer-copyright p {
-  color: rgba(255,255,255,0.9);
-  opacity: 0.9;
+  color: #030929;
+
   margin:0px;
 }
 .footer-copyright p a {
   text-decoration: none;
-  color: rgba(255,255,255,0.9);
-  opacity: 1;
+  color: #030929;
+
 }
 .footer-copyright p a:hover {
-  color: #7759FF;
-  opacity: 1;
+  color: #FFB83F;
+
 }
