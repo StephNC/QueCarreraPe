@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background:white;
+  padding: 0px;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -36,4 +37,9 @@
 }
 .user-name {
   color: black;
+}
+
+.container-fluid {
+  padding-right: 70px;
+  padding-left: 80px;
 }
