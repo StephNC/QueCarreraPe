@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%# <title>ConoceTuCarreraPeru</title>
 
-    <title>ConoceTuCarreraPeru</title>
-
-    <meta property="og:title" content="Le Wagon - The French innovative coding school">
+    <meta property="og:title" content="QueCarrera - El mejor lugar para elegir la carrera correcta">
     <meta property="og:image" content="facebook-card.jpg">
-    <meta property="og:description" content="Le Wagon is the best French coding school for entrepreneurs. Checkout by yourself the projects of our students. You will be impressed.">
-    <meta property="og:site_name" content="Le Wagon"/>
+    <meta property="og:description" content="En QueCarrera buscamos que los jóvenes se informen con experiencias reales, amplíen su perspectiva y con ello puedan elegir de la mejor manera que estudiar y donde hacerlo.">
+    <meta property="og:site_name" content="QueCarrera"/> %>
 
     <title>Encuentra tu carrera ideal. ¡QueCarrera te ayuda a descubrirla!</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
